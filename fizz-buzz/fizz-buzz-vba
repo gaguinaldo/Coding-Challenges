@@ -1,0 +1,32 @@
+Sub fizz_buzz()
+
+Dim i As Integer
+Dim j As Integer
+
+    Range("A1").Value = "Number"
+    Range("B1").Value = "FizzBuzz"
+    
+For j = 1 To 100
+    Cells(j + 1, 1).Value = j
+        
+    Next j
+
+For i = 1 To 100
+    
+    If Cells(i + 1, 1) Mod 5 = 0 And Cells(i + 1, 1) Mod 3 = 0 Then
+        Cells(i + 1, 2).Value = "FIzzBuzz"
+    
+    ElseIf Cells(i + 1, 1) Mod 3 = 0 Then
+        Cells(i + 1, 2).Value = "Fizz"
+        
+    ElseIf Cells(i + 1, 1) Mod 5 = 0 Then
+        Cells(i + 1, 2).Value = "Buzz"
+    
+    Else
+        Cells(i + 1, 2).Value = ""
+
+    End If
+    
+    Next i
+
+End Sub
